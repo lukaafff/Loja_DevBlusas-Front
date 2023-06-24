@@ -13,7 +13,7 @@ class Navbar extends Component {
     render(){
         return(
             <nav className="NavbarItens">
-                <a href="#"><img src={require('../images/logo.png')}></img></a>
+                <a href="#"><img src={require('../../images/logo.png')}></img></a>
                 <ul className={this.state.clicked ? "nav-menu active" : "nav-menu"}>
                     {/* mapear a lista para renderizar através das cheves criadas */}
                     {MenuData.map((item, index) => {
@@ -37,7 +37,7 @@ class Navbar extends Component {
                             </div>
                         </div>
                 </ul>
-                <div class="menu" onClick={this.handleClick}>
+                <div className="menu" onClick={this.handleClick}>
                     <i className={this.state.clicked ? "bx bx-x" : "bx bx-menu"} id="menu-icon"></i>
                 </div>
             </nav>
