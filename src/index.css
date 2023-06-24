@@ -9,3 +9,16 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+/* scroll bar personalizado */
+::-webkit-scrollbar{
+  width: 6px;
+  background-color: #222327;
+  border: 5px solid #222327;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: #04bace;
+  border-radius: 50px;
+}
+/* scroll bar personalizado */

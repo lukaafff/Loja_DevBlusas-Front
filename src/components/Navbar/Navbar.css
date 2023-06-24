@@ -94,8 +94,17 @@
 }
 
 .login label {
-    margin-left: -20px;
     cursor: pointer;
+}
+
+.bxs-user {
+    position: relative;
+    top: 5px;
+}
+
+.bx-cart {
+    position: relative;
+    bottom: 5px;
 }
 
 .login:hover{
