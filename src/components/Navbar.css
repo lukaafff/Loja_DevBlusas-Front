@@ -1,0 +1,158 @@
+/* NAVBAR LINKS */
+.NavbarItens {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.1rem;
+    padding: 0 30px;
+    background-color: #101010;
+    height: 96px;
+    width: 100%;
+}
+
+.NavbarItens img {
+    margin-left: 70px;
+    width: 250px;
+}
+
+.nav-menu {
+    display: grid;
+    grid-template-columns: repeat(15, auto);
+    grid-gap: 20px;
+    list-style: none;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.nav-links {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.nav-links:hover{
+    color: #00cae1;
+}
+
+/* INPUT DE BUSCA */
+.busca-input {
+    width: 200px;
+    margin: 30px 15px;
+    position: relative;
+}
+
+.busca-input label {
+    font-size: 1rem;
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+    color: #9F9F9F;
+    cursor: text;
+    transition: 0.5s ease-in-out;
+}
+
+.busca-input .input {
+    width: 200px;
+    padding: 5px;
+    color: #9F9F9F;
+    border: 0;
+    border-bottom: 2px solid #9F9F9F;
+    outline: 0;
+    background: none;
+}
+
+.busca-input .input:focus{
+    border-bottom: 2px solid #00cae1;
+    color: #fff;
+}
+
+.busca-input .input:focus ~ label{
+    transform: translateY(-24px);
+    font-size: 12px;
+    color: #00cae1;
+}
+
+.nav-rigth {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bx {
+    color: #fff;
+    font-size: 2rem;
+    margin-right: 30px;
+    cursor: pointer;
+}
+
+.login {
+    color: #fff;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+.login label {
+    margin-left: -20px;
+    cursor: pointer;
+}
+
+.login:hover{
+    border-bottom: 2px solid #00cae1;
+}
+
+.bx-cart:hover{
+    color: #00cae1;
+}
+
+#menu-icon{
+    display: none;
+    position: absolute;
+    cursor: pointer;
+    z-index: 10001;
+    right: 7%;
+    top: 4%;
+}
+
+@media screen and (max-width: 1568px){
+    #menu-icon{
+        display: block;
+    }
+    .NavbarItens{
+        z-index: 99;
+    }
+    .nav-menu{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        background: #161616;
+        height: auto;
+        position: absolute;
+        top: 0;
+        right: -100%;
+        height: 100%;
+        width: 100%;
+        align-items: stretch;
+        padding: 130px 30px 40px;
+        margin: 0;
+        z-index: -1;
+        transition: all 0.5s ease-in-out;
+    }
+    .nav-menu.active{
+        right: 0%;
+    }
+    .nav-links{
+        display: block;
+        widows: 100%;
+        padding: 0.8rem 0;
+    }
+    .nav-rigth{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .nav-rigth .bx {
+        margin-bottom: 30px;
+    }
+}
