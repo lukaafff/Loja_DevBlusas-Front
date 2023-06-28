@@ -1,0 +1,47 @@
+.centralAtendimento{
+    margin-left: auto;
+    margin-right: auto; 
+    width: 80%;
+    height: 500px;
+    background-color: rgb(236, 241, 241);
+}
+
+.ct-corpo{
+    display: flex;
+    justify-content: space-between;
+}
+.ct-conteiner h2{
+    padding: 20px 10px;
+    width: 100%;
+    text-align: start;
+}
+.ct-menu{
+    width: 25%;
+    height: 100%;
+    text-align: start;
+    list-style-type: none;
+    
+}
+
+.ct-li{
+    margin: 5px 5px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    
+}
+
+.ct-li:last-child{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding-bottom: 10px;
+}
+
+.ct-links{
+    text-decoration: none;
+    color: black;
+}
+
+.ct-componente{
+    width: 70%;
+    height: 400px;
+    background-color: rgb(255, 136, 0);
+}

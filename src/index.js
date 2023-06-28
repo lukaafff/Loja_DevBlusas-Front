@@ -3,10 +3,44 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 
+import { createBrowserRouter, RouterProvider, Route } from 'react-router-dom';
+
+//paginas
+import Home from './routes/Home';
+import TodosProdutos from './routes/TodosProdutos';
+
+const router = createBrowserRouter([
+  {
+    element: <App/>,
+    children: [
+      {
+        path: "/",
+        element: <Home/>,
+      },
+      {
+        path: "produtos",
+        element: <TodosProdutos/>,
+      },
+      {
+        path: "novidades",
+      },
+      {
+        path: "bestsellers",
+      },
+      {
+        path: "conjuntos",
+      },
+      {
+        path: "vestidos",
+      },
+    ]
+  }
+]);
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router}/>
   </React.StrictMode>
 );
 
