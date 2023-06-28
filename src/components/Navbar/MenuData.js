@@ -2,27 +2,27 @@
 export const MenuData = [
     {
         title: "Todos os produtos",
-        url: "#",
+        url: "/",
         cName: "nav-links"
     },
     {
         title: "Novidades",
-        url: "#",
+        url: "/novidades",
         cName: "nav-links"
     },
     {
         title: "Best sellers",
-        url: "#",
+        url: "/bestsellers",
         cName: "nav-links"
     },
     {
         title: "Conjuntos",
-        url: "#",
+        url: "/conjuntos",
         cName: "nav-links"
     },
     {
         title: "Vestidos",
-        url: "#",
+        url: "/vestidos",
         cName: "nav-links"
     }
 ]
