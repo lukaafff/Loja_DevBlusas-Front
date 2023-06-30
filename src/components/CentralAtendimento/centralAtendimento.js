@@ -1,11 +1,19 @@
-import './centralAtendimento.css'
+import Contato from '../Contato/Contato';
+import EntregasFretes from '../EntregasFretes/EntregasFretes';
+import Pagamentos from '../Pagamentos/Pagamentos';
+import PoliticaPrivacidade from '../PoliticaPrivacidade/PoliticaPrivacidade'
+import TermosUso from '../TermosUso/TermosUso';
+import TrocasDevolucoes from '../TrocasDevolucoes/TrocasDevolucoes';
+import './CentralAtendimento.css'
 
 const CentralAtendimento = ()=>{
+
+
     return(
 
         <section className='centralAtendimento'>
             <div className='ct-conteiner'>
-                <h2>CENTRAL DE ATENDIMENTO</h2>
+                <h2 className='ct-conteiner-titulo'>CENTRAL DE ATENDIMENTO</h2>
                 <div className='ct-corpo'>
                         <ul className="ct-menu">
                                     <li className='ct-li'><a href="#" className="ct-links">CONTATO</a></li>
@@ -17,7 +25,12 @@ const CentralAtendimento = ()=>{
                                     <li className='ct-li'><a href="#" className="ct-links">ENTREGAS E FRETE</a></li>
                         </ul>
                         <div className='ct-componente'>
-                               ----- componentea ser injetado no click -----
+                               {/*<PoliticaPrivacidade />*/}
+                               <Contato />
+                               {/*<TermosUso />*/}
+                               {/*<TrocasDevolucoes/>*/}
+                               {/*<Pagamentos/>*/}
+                               {/*<EntregasFretes/>*/}
                         </div> 
                 </div>
             </div>

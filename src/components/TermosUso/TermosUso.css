@@ -1,0 +1,9 @@
+.tu-texto, .tu-titulo{
+    margin-left: 25px;
+    text-align: left;
+    
+}
+
+.tu-texto-paragrafo, .tu-texto-titulo{
+    margin: 50px, 5px;
+}

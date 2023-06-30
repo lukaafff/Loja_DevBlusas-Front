@@ -1,0 +1,9 @@
+.td-texto, .td-titulo{
+    margin-left: 25px;
+    text-align: left;
+    
+}
+
+.td-texto-paragrafo, .td-texto-titulo{
+    margin: 50px, 5px;
+}

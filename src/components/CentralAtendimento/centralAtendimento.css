@@ -2,15 +2,15 @@
     margin-left: auto;
     margin-right: auto; 
     width: 80%;
-    height: 500px;
-    background-color: rgb(236, 241, 241);
+    height: 600px;
+
 }
 
 .ct-corpo{
     display: flex;
     justify-content: space-between;
 }
-.ct-conteiner h2{
+.ct-conteiner-titulo{
     padding: 20px 10px;
     width: 100%;
     text-align: start;
@@ -24,10 +24,12 @@
 }
 
 .ct-li{
-    margin: 5px 5px;
-    padding-top: 10px;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
     
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 5px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    transition: background 0.5s;
 }
 
 .ct-li:last-child{
@@ -43,5 +45,8 @@
 .ct-componente{
     width: 70%;
     height: 400px;
-    background-color: rgb(255, 136, 0);
+}
+
+.ct-li:hover{
+    background-color: rgba(117, 117, 117, 0.15);
 }

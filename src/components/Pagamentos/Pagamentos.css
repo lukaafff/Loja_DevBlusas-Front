@@ -1,0 +1,9 @@
+.pg-texto, .pg-titulo{
+    margin-left: 25px;
+    text-align: left;
+    
+}
+
+.pg-texto-paragrafo, .pg-texto-titulo{
+    margin: 50px, 5px;
+}
