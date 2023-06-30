@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 import './Cards.css';
 
-const Cards = () => {
+const Cards = ({ subId }) => {
   const [produtos, setProdutos] = useState([]);
 
   const getProdutos = async () => {
@@ -21,18 +21,20 @@ const Cards = () => {
     getProdutos();
   }, []);
 
+  const filteredProdutos = subId ? produtos.filter((produto) => produto.subId === subId) : produtos;
+
   return (
     <div>
-      <h1 className="title">Todos os produtos</h1>
+      <h1 className="title">{subId ? subId : 'Todos os produtos'}</h1>
       <div className="categorias">
         <div className="container">
           <div className="multi-categorias">
             <div className="cont">
               <ul className="grid-produtos">
-                {produtos.length === 0 ? (
+                {filteredProdutos.length === 0 ? (
                   <p>Carregando...</p>
                 ) : (
-                  produtos.map((produto) => (
+                  filteredProdutos.map((produto) => (
                     <li className="item-produto" key={produto.id}>
                       <div className="cont">
                         <div className="img">

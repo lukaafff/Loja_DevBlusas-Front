@@ -3,47 +3,51 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 
-import { createBrowserRouter, RouterProvider, Route } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
-//paginas
+import Cards from './components/Cards/Cards';
+
+// páginas
 import Home from './routes/Home';
-import TodosProdutos from './routes/TodosProdutos';
+import Blusas from './routes/Blusa';
+import CentralDeAtendimento from './components/CentralAtendimento/centralAtendimento';
+import Camiseta from './routes/Camisetas';
 
 const router = createBrowserRouter([
   {
-    element: <App/>,
+    element: <App />,
     children: [
       {
-        path: "/",
-        element: <Home/>,
+        path: '/',
+        element: <Home />,
       },
       {
-        path: "produtos",
-        element: <TodosProdutos/>,
+        path: 'blusas',
+        element: <Blusas/>,
       },
       {
-        path: "novidades",
+        path: 'camisetas',
+        element: <Camiseta/>,
       },
       {
-        path: "bestsellers",
+        path: 'calcas',
+        element: <Cards subId="calças" />,
       },
       {
-        path: "conjuntos",
+        path: 'vestidos',
+        element: <Cards subId="vestidos" />,
       },
       {
-        path: "vestidos",
+        path: 'centraldeatendimento',
+        element: <CentralDeAtendimento />,
       },
-    ]
-  }
+    ],
+  },
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router}/>
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals

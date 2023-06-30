@@ -1,6 +1,8 @@
 import { Component } from "react";
 import './Footer.css';
 
+import { Link } from "react-router-dom";
+
 class Footer extends Component {
     render(){
         return(
@@ -10,7 +12,7 @@ class Footer extends Component {
                 <div className="col">
                         <h3>Contato</h3>
                         <ul className="footer-menu">
-                            <li><a href="#" className="footer-links">Fale conosco</a></li>
+                            <li><Link to={`/centraldeatendimento`} href="#" className="footer-links">Central de Atendimento</Link></li>
                         </ul>
                     </div>
 
@@ -19,8 +21,6 @@ class Footer extends Component {
                         <ul className="footer-menu">
                             <li><a href="#" className="footer-links">Quem somos</a></li>
                             <li><a href="#" className="footer-links">Perguntas frequentes</a></li>
-                            <li><a href="#" className="footer-links">Sustentabilidade</a></li>
-                            <li><a href="#" className="footer-links">Black Friday 2023</a></li>
                         </ul>
                     </div>
 

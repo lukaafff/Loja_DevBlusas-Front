@@ -6,18 +6,18 @@ export const MenuData = [
         cName: "nav-links"
     },
     {
-        title: "Novidades",
-        url: "/novidades",
+        title: "Blusas",
+        url: "/blusas",
         cName: "nav-links"
     },
     {
-        title: "Best sellers",
-        url: "/bestsellers",
+        title: "Camisetas",
+        url: "/camisetas",
         cName: "nav-links"
     },
     {
-        title: "Conjuntos",
-        url: "/conjuntos",
+        title: "Calças",
+        url: "/calcas",
         cName: "nav-links"
     },
     {
