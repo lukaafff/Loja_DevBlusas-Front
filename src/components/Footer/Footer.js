@@ -12,7 +12,7 @@ class Footer extends Component {
                 <div className="col">
                         <h3>Contato</h3>
                         <ul className="footer-menu">
-                            <li><Link to={`/centraldeatendimento`} href="#" className="footer-links">Central de Atendimento</Link></li>
+                            <li><Link to={`/centraldeatendimento/contato`} href="#" className="footer-links">Contato</Link></li>
                         </ul>
                     </div>
 

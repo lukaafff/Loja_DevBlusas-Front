@@ -13,6 +13,8 @@ import Blusas from './routes/Blusa';
 import CentralDeAtendimento from './components/CentralAtendimento/CentralAtendimento';
 import Camiseta from './routes/Camisetas';
 
+import Contato from './components/Contato/Contato';
+
 const router = createBrowserRouter([
   {
     element: <App />,
@@ -38,7 +40,7 @@ const router = createBrowserRouter([
         element: <Cards subId="vestidos" />,
       },
       {
-        path: 'Centraldeatendimento',
+        path: 'centraldeatendimento/contato',
         element: <CentralDeAtendimento />,
       },
     ],

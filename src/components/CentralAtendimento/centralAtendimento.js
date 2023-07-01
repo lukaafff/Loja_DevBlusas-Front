@@ -1,3 +1,5 @@
+import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
+
 import Contato from '../Contato/Contato';
 import EntregasFretes from '../EntregasFretes/EntregasFretes';
 import Pagamentos from '../Pagamentos/Pagamentos';
@@ -16,7 +18,7 @@ const CentralAtendimento = ()=>{
                 <h2 className='ct-conteiner-titulo'>CENTRAL DE ATENDIMENTO</h2>
                 <div className='ct-corpo'>
                         <ul className="ct-menu">
-                                    <li className='ct-li'><a href="#" className="ct-links">CONTATO</a></li>
+                                    <li className='ct-li'><a href="centraldeatendimento/contato" className="ct-links">CONTATO</a></li>
                                     <li className='ct-li'><a href="#" className="ct-links">PERGUNTAS FREQUENTES</a></li>
                                     <li className='ct-li'><a href="#" className="ct-links">POLITICA DE PRIVACIDADE</a></li>
                                     <li className='ct-li'><a href="#" className="ct-links">TERMOS DE USO</a></li>
@@ -26,7 +28,7 @@ const CentralAtendimento = ()=>{
                         </ul>
                         <div className='ct-componente'>
                                {/*<PoliticaPrivacidade />*/}
-                               <Contato />
+                               {/*<Contato />*}
                                {/*<TermosUso />*/}
                                {/*<TrocasDevolucoes/>*/}
                                {/*<Pagamentos/>*/}
