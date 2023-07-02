@@ -10,37 +10,38 @@ class Footer extends Component {
                 <div className="container">
 
                 <div className="col">
-                        <h3>Contato</h3>
-                        <ul className="footer-menu">
-                            <li><Link to={`/centraldeatendimento`} href="#" className="footer-links">Contato</Link></li>
-                        </ul>
-                    </div>
+                    <h3>Contato</h3>
+                    <ul className="footer-menu">
+                        <li><Link to="/contato" className="footer-links">Contato</Link></li>
+                    </ul>
+                </div>
+
 
                     <div className="col">
                         <h3>Sobre</h3>
                         <ul className="footer-menu">
-                            <li><a href="#" className="footer-links">Quem somos</a></li>
-                            <li><a href="#" className="footer-links">Perguntas frequentes</a></li>
+                            <li><Link to="/centraldeatendimento" className="footer-links">Quem somos</Link></li>
+                            <li><Link href="#" className="footer-links">Perguntas frequentes</Link></li>
                         </ul>
                     </div>
 
                     <div className="col">
                         <h3>Meus dados</h3>
                         <ul className="footer-menu">
-                            <li><a href="#" className="footer-links">Minha conta</a></li>
-                            <li><a href="#" className="footer-links">Meus pedidos</a></li>
-                            <li><a href="#" className="footer-links">Minha lista de desejos</a></li>
+                            <li><Link to="/centraldeatendimento" className="footer-links">Minha conta</Link></li>
+                            <li><Link to="/centraldeatendimento" className="footer-links">Meus pedidos</Link></li>
+                            <li><Link to="/centraldeatendimento" className="footer-links">Minha lista de desejos</Link></li>
                         </ul>
                     </div>
 
                     <div className="col">
                         <h3>Políticas</h3>
                         <ul className="footer-menu">
-                            <li><a href="#" className="footer-links">Privacidade</a></li>
-                            <li><a href="#" className="footer-links">Termos de uso</a></li>
-                            <li><a href="#" className="footer-links">Troca e devolução</a></li>
-                            <li><a href="#" className="footer-links">Entrega e frete</a></li>
-                            <li><a href="#" className="footer-links">Pagamento</a></li>
+                            <li><Link to="/politica-de-privacidade" className="footer-links">Privacidade</Link></li>
+                            <li><Link to="/termos-de-uso" className="footer-links">Termos de uso</Link></li>
+                            <li><Link to="/trocas-e-devolucoes" className="footer-links">Troca e devolução</Link></li>
+                            <li><Link to="/entregas-e-frete" className="footer-links">Entrega e frete</Link></li>
+                            <li><Link to="/pagamentos" className="footer-links">Pagamento</Link></li>
                         </ul>
                     </div>
                     

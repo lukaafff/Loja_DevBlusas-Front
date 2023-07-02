@@ -45,33 +45,35 @@ const router = createBrowserRouter([
         element: <Cards subId="vestidos" />,
       },
       {
-        path: 'centraldeatendimento',
         element: <CentralDeAtendimento />,
+        children: [
+          {
+            path: 'contato',
+            element: <Contato />,
+          },
+          {
+            path: 'politica-de-privacidade',
+            element: <PoliticaPrivacidade />,
+          },
+          {
+            path: 'termos-de-uso',
+            element: <TermosUso />,
+          },
+          {
+            path: 'trocas-e-devolucoes',
+            element: <TrocasDevolucoes />,
+          },
+          {
+            path: 'pagamentos',
+            element: <Pagamentos />,
+          },
+          {
+            path: 'entregas-e-frete',
+            element: <EntregasFretes />,
+          },
+        ]
       },
-      {
-        path: 'contato',
-        element: <Contato />,
-      },
-      {
-        path: 'politica-de-privacidade',
-        element: <PoliticaPrivacidade />,
-      },
-      {
-        path: 'termos-de-uso',
-        element: <TermosUso />,
-      },
-      {
-        path: 'trocas-e-devolucoes',
-        element: <TrocasDevolucoes />,
-      },
-      {
-        path: 'pagamentos',
-        element: <Pagamentos />,
-      },
-      {
-        path: 'entregas-e-frete',
-        element: <EntregasFretes />,
-      },
+      
 
     ],
   },
