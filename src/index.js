@@ -5,13 +5,14 @@ import App from './App';
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
-import Cards from './components/Cards/Cards';
-
 // páginas
 import Home from './routes/Home';
 import Blusas from './routes/Blusa';
-import CentralDeAtendimento from './components/CentralAtendimento/CentralAtendimento';
 import Camiseta from './routes/Camisetas';
+import Calcas from './routes/Calcas';
+import Vestidos from './routes/Vestidos';
+
+import CentralDeAtendimento from './components/CentralAtendimento/CentralAtendimento';
 
 import Contato from './components/Contato/Contato';
 import EntregasFretes from './components/EntregasFretes/EntregasFretes';
@@ -19,6 +20,8 @@ import Pagamentos from './components/Pagamentos/Pagamentos';
 import PoliticaPrivacidade from './components/PoliticaPrivacidade/PoliticaPrivacidade';
 import TermosUso from './components/TermosUso/TermosUso';
 import TrocasDevolucoes from './components/TrocasDevolucoes/TrocasDevolucoes';
+
+
 
 const router = createBrowserRouter([
   {
@@ -38,11 +41,11 @@ const router = createBrowserRouter([
       },
       {
         path: 'calcas',
-        element: <Cards subId="calças" />,
+        element: <Calcas/>,
       },
       {
         path: 'vestidos',
-        element: <Cards subId="vestidos" />,
+        element: <Vestidos/>,
       },
       {
         element: <CentralDeAtendimento />,
