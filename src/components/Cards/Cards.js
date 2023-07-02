@@ -39,7 +39,7 @@ const Cards = ({ subId }) => {
                       <div className="cont">
                         <div className="img">
                           <a href="#">
-                            <img src={require('../../images/pdt1.jpg')} alt="Imagem do produto" />
+                          <img src={produto.url_imagem} alt="Imagem do produto" />
                           </a>
                         </div>
                         <div className="infos">
