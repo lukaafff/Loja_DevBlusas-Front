@@ -43,8 +43,12 @@
 }
 
 .ct-componente{
+    flex: 1;
     width: 70%;
-    height: 400px;
+    min-height: 400px;
+    max-height: auto;
+    background-color: red;
+    margin-bottom: 20px;
 }
 
 .ct-li:hover{

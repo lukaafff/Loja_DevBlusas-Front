@@ -14,6 +14,11 @@ import CentralDeAtendimento from './components/CentralAtendimento/CentralAtendim
 import Camiseta from './routes/Camisetas';
 
 import Contato from './components/Contato/Contato';
+import EntregasFretes from './components/EntregasFretes/EntregasFretes';
+import Pagamentos from './components/Pagamentos/Pagamentos';
+import PoliticaPrivacidade from './components/PoliticaPrivacidade/PoliticaPrivacidade';
+import TermosUso from './components/TermosUso/TermosUso';
+import TrocasDevolucoes from './components/TrocasDevolucoes/TrocasDevolucoes';
 
 const router = createBrowserRouter([
   {
@@ -40,9 +45,34 @@ const router = createBrowserRouter([
         element: <Cards subId="vestidos" />,
       },
       {
-        path: 'centraldeatendimento/contato',
+        path: 'centraldeatendimento',
         element: <CentralDeAtendimento />,
       },
+      {
+        path: 'contato',
+        element: <Contato />,
+      },
+      {
+        path: 'politica-de-privacidade',
+        element: <PoliticaPrivacidade />,
+      },
+      {
+        path: 'termos-de-uso',
+        element: <TermosUso />,
+      },
+      {
+        path: 'trocas-e-devolucoes',
+        element: <TrocasDevolucoes />,
+      },
+      {
+        path: 'pagamentos',
+        element: <Pagamentos />,
+      },
+      {
+        path: 'entregas-e-frete',
+        element: <EntregasFretes />,
+      },
+
     ],
   },
 ]);
