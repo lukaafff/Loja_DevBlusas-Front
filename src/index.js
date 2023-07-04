@@ -12,7 +12,7 @@ import Camiseta from './routes/Camisetas';
 import Calcas from './routes/Calcas';
 import Vestidos from './routes/Vestidos';
 
-import CentralDeAtendimento from './components/CentralAtendimento/CentralAtendimento';
+import CentralDeAtendimento from './components/CentralAtendimento/centralAtendimento';
 
 import Contato from './components/Contato/Contato';
 import EntregasFretes from './components/EntregasFretes/EntregasFretes';
