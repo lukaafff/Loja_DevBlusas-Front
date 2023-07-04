@@ -38,9 +38,9 @@ const Cards = ({ subId }) => {
                     <li className="item-produto" key={produto.id}>
                       <div className="cont">
                         <div className="img">
-                          <a href="#">
-                          <img src={produto.url_imagem} alt="Imagem do produto" />
-                          </a>
+                        <Link to={`/produto/${produto.id}`}>
+                            <img src={produto.url_imagem} alt="Imagem do produto" />
+                        </Link>
                         </div>
                         <div className="infos">
                           <div className="top-card">

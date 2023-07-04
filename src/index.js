@@ -12,7 +12,7 @@ import Camiseta from './routes/Camisetas';
 import Calcas from './routes/Calcas';
 import Vestidos from './routes/Vestidos';
 
-import CentralDeAtendimento from './components/CentralAtendimento/centralAtendimento';
+import CentralDeAtendimento from './components/CentralAtendimento/CentralAtendimento';
 
 import Contato from './components/Contato/Contato';
 import EntregasFretes from './components/EntregasFretes/EntregasFretes';
@@ -20,7 +20,7 @@ import Pagamentos from './components/Pagamentos/Pagamentos';
 import PoliticaPrivacidade from './components/PoliticaPrivacidade/PoliticaPrivacidade';
 import TermosUso from './components/TermosUso/TermosUso';
 import TrocasDevolucoes from './components/TrocasDevolucoes/TrocasDevolucoes';
-
+import ProdutoIndivudial from './routes/ProdutoIndividual';
 
 
 const router = createBrowserRouter([
@@ -75,6 +75,10 @@ const router = createBrowserRouter([
             element: <EntregasFretes />,
           },
         ]
+      },
+      {
+        path: 'produto/:id',
+        element: <ProdutoIndivudial />,
       },
       
 
