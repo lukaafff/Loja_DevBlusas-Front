@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   BsFillArrowLeftCircleFill,
   BsFillArrowRightCircleFill,
@@ -16,6 +16,14 @@ const Carousel = ({ data }) => {
   const prevSlide = () => {
     setSlide(slide === 0 ? data.length - 1 : slide - 1);
   };
+
+  useEffect(() => {
+    const timer = setTimeout(nextSlide, 3000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [slide]);
 
   return (
     <section className="carousel">

@@ -1,11 +1,11 @@
-import React from 'react';
-import { Routes, Route, Link } from 'react-router-dom';
+import React from "react";
+import { Routes, Route, Link } from "react-router-dom";
 
 import { CentralData } from "./DataCentral";
 
-import { Outlet } from 'react-router-dom';
+import { Outlet } from "react-router-dom";
 
-import './CentralAtendimento.css';
+import "./centralAtendimento.css";
 
 const CentralAtendimento = () => {
   return (
@@ -14,16 +14,18 @@ const CentralAtendimento = () => {
         <h2 className="ct-conteiner-titulo">CENTRAL DE ATENDIMENTO</h2>
         <div className="ct-corpo">
           <ul className="ct-menu">
-          {CentralData.map((item, index) => {
-                        return(
-                           <li key={index} className={item.cName}>
-                                <Link to={item.url} className={item.cName2}>{item.title}</Link>
-                            </li> 
-                        )
-                    })}
+            {CentralData.map((item, index) => {
+              return (
+                <li key={index} className={item.cName}>
+                  <Link to={item.url} className={item.cName2}>
+                    {item.title}
+                  </Link>
+                </li>
+              );
+            })}
           </ul>
           <div className="ct-componente">
-            <Outlet/>
+            <Outlet />
           </div>
         </div>
       </div>
