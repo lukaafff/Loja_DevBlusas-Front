@@ -16,7 +16,7 @@ const Home = () => {
   return (
     <div>
       <Carousel data={images} />
-      <Cards subId="" /> {/* Passando subId vazio */}
+      <Cards categoria="" /> {/* Passando subId vazio */}
     </div>
   );
 };
