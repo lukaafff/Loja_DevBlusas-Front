@@ -5,7 +5,7 @@ import { CentralData } from "./DataCentral";
 
 import { Outlet } from "react-router-dom";
 
-import "./centralAtendimento.css";
+import "./CentralAtendimento.css";
 
 const CentralAtendimento = () => {
   return (

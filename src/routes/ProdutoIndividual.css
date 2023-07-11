@@ -1,0 +1,9 @@
+h1 {
+    text-transform: uppercase;
+}
+
+.imgP img {
+    margin: 10px;
+    width: 370px;
+    border-radius: 30px;
+}

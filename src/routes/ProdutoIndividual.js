@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import siteFetch from '../axios/config';
 import { useParams, Link } from 'react-router-dom';
+import "./ProdutoIndividual.css";
 
 const ProdutoIndivudial = () => {
-  const { id } = useParams();
+  const { _id } = useParams();
   const [produto, setProduto] = useState(null);
 
   const getProduto = async () => {
     try {
-      const response = await siteFetch.get(`/produto/${id}`);
+      const response = await siteFetch.get(`/produto/${_id}`);
       const data = response.data;
       setProduto(data);
     } catch (error) {
@@ -18,13 +19,18 @@ const ProdutoIndivudial = () => {
 
   useEffect(() => {
     getProduto();
-  }, [id]);
+  }, [_id]);
 
   return (
     <div>
       {produto ? (
         <div>
-          <h1>{produto.nome}</h1>
+          <div className="imgP">
+            <img src={produto.url_imagem} alt="Imagem do produto" />
+          </div>
+          <h1 className='titulo'>{produto.nome}</h1>
+          <p>{produto.descricao}</p>
+          <p>{produto.detalhes_tecnicos}</p>
         </div>
       ) : (
         <p>Carregando...</p>

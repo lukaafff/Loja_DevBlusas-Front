@@ -4,13 +4,14 @@ import { Link } from 'react-router-dom';
 
 import './Cards.css';
 
-const Cards = ({ subId }) => {
+const Cards = ({ categoria }) => {
   const [produtos, setProdutos] = useState([]);
 
   const getProdutos = async () => {
     try {
       const response = await siteFetch.get('/produto');
       const data = response.data;
+      console.log(data)
       setProdutos(data);
     } catch (error) {
       console.log(error);
@@ -21,11 +22,11 @@ const Cards = ({ subId }) => {
     getProdutos();
   }, []);
 
-  const filteredProdutos = subId ? produtos.filter((produto) => produto.subId === subId) : produtos;
+  const filteredProdutos = categoria ? produtos.filter((produto) => produto.categoria === categoria) : produtos;
 
   return (
     <div>
-      <h1 className="title">{subId ? subId : 'Todos os produtos'}</h1>
+      <h1 className="title">{categoria ? categoria : 'Todos os produtos'}</h1>
       <div className="categorias">
         <div className="container">
           <div className="multi-categorias">
@@ -35,10 +36,10 @@ const Cards = ({ subId }) => {
                   <p>Carregando...</p>
                 ) : (
                   filteredProdutos.map((produto) => (
-                    <li className="item-produto" key={produto.id}>
+                    <li className="item-produto" key={produto._id}>
                       <div className="cont">
                         <div className="img">
-                        <Link to={`/produto/${produto.id}`}>
+                        <Link to={`/produto/${produto._id}`}>
                             <img src={produto.url_imagem} alt="Imagem do produto" />
                         </Link>
                         </div>
