@@ -1,313 +1,83 @@
-import { Component } from "react";
-import "./Cards.css";
+import React, { useState, useEffect } from 'react';
+import siteFetch from '../../axios/config';
+import { Link } from 'react-router-dom';
 
-class Cards extends Component {
-    render(){
-        return(
-            <div className="categorias">
-                <div className="container">
-                    <div className="title">
-                        <h1>Todos os produtos</h1>
-                    </div>
-                </div>
+import './Cards.css';
 
-                <div className="multi-categorias">
-                    <div className="cont">
-                        <ul className="grid-produtos">
-                            <li className="item-produto">
-                                <div className="cont">
-                                    <div className="img">
-                                        <a href="#"><img src={require('../../images/pdt1.jpg')}></img></a>
-                                    </div>
-                                    <div className="infos">
-                                        <div className="top-card">
-                                            <div className="avaliacao">
-                                                <i className='bx bx-star'></i>
-                                                <i className='bx bx-star'></i>
-                                                <i className='bx bx-star'></i>
-                                                <i className='bx bx-star'></i>
-                                                <i className='bx bx-star'></i>
-                                            </div>
-                                            <div className="favorito">
-                                                <i className='bx bx-heart'></i>
-                                            </div>
-                                        </div>
-                                        
-                                        <div className="info-produto">
-                                            <h3>Nome produto</h3>
-                                            <span>R$ 189,90</span>
-                                        </div>
-                                        <div className="btn-carrinho">
-                                            <a href="#">
-                                                <i className='bx bx-cart-add'></i> Adicionar no carrinho
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
+const Cards = ({ categoria }) => {
+  const [produtos, setProdutos] = useState([]);
 
-                            <li className="item-produto">
-                                <div className="cont">
-                                    <div className="img">
-                                        <a href="#"><img src={require('../../images/pdt1.jpg')}></img></a>
-                                    </div>
-                                    <div className="infos">
-                                        <div className="top-card">
-                                            <div className="avaliacao">
-                                                <i className='bx bx-star'></i>
-                                                <i className='bx bx-star'></i>
-                                                <i className='bx bx-star'></i>
-                                                <i className='bx bx-star'></i>
-                                                <i className='bx bx-star'></i>
-                                            </div>
-                                            <div className="favorito">
-                                                <i className='bx bx-heart'></i>
-                                            </div>
-                                        </div>
-                                        
-                                        <div className="info-produto">
-                                            <h3>Nome produto</h3>
-                                            <span>R$ 189,90</span>
-                                        </div>
-                                        <div className="btn-carrinho">
-                                            <a href="#">
-                                                <i className='bx bx-cart-add'></i> Adicionar no carrinho
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-
-                            <li className="item-produto">
-                                <div className="cont">
-                                    <div className="img">
-                                        <a href="#"><img src={require('../../images/pdt1.jpg')}></img></a>
-                                    </div>
-                                    <div className="infos">
-                                        <div className="top-card">
-                                            <div className="avaliacao">
-                                                <i className='bx bx-star'></i>
-                                                <i className='bx bx-star'></i>
-                                                <i className='bx bx-star'></i>
-                                                <i className='bx bx-star'></i>
-                                                <i className='bx bx-star'></i>
-                                            </div>
-                                            <div className="favorito">
-                                                <i className='bx bx-heart'></i>
-                                            </div>
-                                        </div>
-                                        
-                                        <div className="info-produto">
-                                            <h3>Nome produto</h3>
-                                            <span>R$ 189,90</span>
-                                        </div>
-                                        <div className="btn-carrinho">
-                                            <a href="#">
-                                                <i className='bx bx-cart-add'></i> Adicionar no carrinho
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-
-                            <li className="item-produto">
-                                <div className="cont">
-                                    <div className="img">
-                                        <a href="#"><img src={require('../../images/pdt1.jpg')}></img></a>
-                                    </div>
-                                    <div className="infos">
-                                        <div className="top-card">
-                                            <div className="avaliacao">
-                                                <i className='bx bx-star'></i>
-                                                <i className='bx bx-star'></i>
-                                                <i className='bx bx-star'></i>
-                                                <i className='bx bx-star'></i>
-                                                <i className='bx bx-star'></i>
-                                            </div>
-                                            <div className="favorito">
-                                                <i className='bx bx-heart'></i>
-                                            </div>
-                                        </div>
-                                        
-                                        <div className="info-produto">
-                                            <h3>Nome produto</h3>
-                                            <span>R$ 189,90</span>
-                                        </div>
-                                        <div className="btn-carrinho">
-                                            <a href="#">
-                                                <i className='bx bx-cart-add'></i> Adicionar no carrinho
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-
-                            <li className="item-produto">
-                                <div className="cont">
-                                    <div className="img">
-                                        <a href="#"><img src={require('../../images/pdt1.jpg')}></img></a>
-                                    </div>
-                                    <div className="infos">
-                                        <div className="top-card">
-                                            <div className="avaliacao">
-                                                <i className='bx bx-star'></i>
-                                                <i className='bx bx-star'></i>
-                                                <i className='bx bx-star'></i>
-                                                <i className='bx bx-star'></i>
-                                                <i className='bx bx-star'></i>
-                                            </div>
-                                            <div className="favorito">
-                                                <i className='bx bx-heart'></i>
-                                            </div>
-                                        </div>
-                                        
-                                        <div className="info-produto">
-                                            <h3>Nome produto</h3>
-                                            <span>R$ 189,90</span>
-                                        </div>
-                                        <div className="btn-carrinho">
-                                            <a href="#">
-                                                <i className='bx bx-cart-add'></i> Adicionar no carrinho
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-
-                            <li className="item-produto">
-                                <div className="cont">
-                                    <div className="img">
-                                        <a href="#"><img src={require('../../images/pdt1.jpg')}></img></a>
-                                    </div>
-                                    <div className="infos">
-                                        <div className="top-card">
-                                            <div className="avaliacao">
-                                                <i className='bx bx-star'></i>
-                                                <i className='bx bx-star'></i>
-                                                <i className='bx bx-star'></i>
-                                                <i className='bx bx-star'></i>
-                                                <i className='bx bx-star'></i>
-                                            </div>
-                                            <div className="favorito">
-                                                <i className='bx bx-heart'></i>
-                                            </div>
-                                        </div>
-                                        
-                                        <div className="info-produto">
-                                            <h3>Nome produto</h3>
-                                            <span>R$ 189,90</span>
-                                        </div>
-                                        <div className="btn-carrinho">
-                                            <a href="#">
-                                                <i className='bx bx-cart-add'></i> Adicionar no carrinho
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-
-                            <li className="item-produto">
-                                <div className="cont">
-                                    <div className="img">
-                                        <a href="#"><img src={require('../../images/pdt1.jpg')}></img></a>
-                                    </div>
-                                    <div className="infos">
-                                        <div className="top-card">
-                                            <div className="avaliacao">
-                                                <i className='bx bx-star'></i>
-                                                <i className='bx bx-star'></i>
-                                                <i className='bx bx-star'></i>
-                                                <i className='bx bx-star'></i>
-                                                <i className='bx bx-star'></i>
-                                            </div>
-                                            <div className="favorito">
-                                                <i className='bx bx-heart'></i>
-                                            </div>
-                                        </div>
-                                        
-                                        <div className="info-produto">
-                                            <h3>Nome produto</h3>
-                                            <span>R$ 189,90</span>
-                                        </div>
-                                        <div className="btn-carrinho">
-                                            <a href="#">
-                                                <i className='bx bx-cart-add'></i> Adicionar no carrinho
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-
-                            <li className="item-produto">
-                                <div className="cont">
-                                    <div className="img">
-                                        <a href="#"><img src={require('../../images/pdt1.jpg')}></img></a>
-                                    </div>
-                                    <div className="infos">
-                                        <div className="top-card">
-                                            <div className="avaliacao">
-                                                <i className='bx bx-star'></i>
-                                                <i className='bx bx-star'></i>
-                                                <i className='bx bx-star'></i>
-                                                <i className='bx bx-star'></i>
-                                                <i className='bx bx-star'></i>
-                                            </div>
-                                            <div className="favorito">
-                                                <i className='bx bx-heart'></i>
-                                            </div>
-                                        </div>
-                                        
-                                        <div className="info-produto">
-                                            <h3>Nome produto</h3>
-                                            <span>R$ 189,90</span>
-                                        </div>
-                                        <div className="btn-carrinho">
-                                            <a href="#">
-                                                <i className='bx bx-cart-add'></i> Adicionar no carrinho
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-
-                            <li className="item-produto">
-                                <div className="cont">
-                                    <div className="img">
-                                        <a href="#"><img src={require('../../images/pdt1.jpg')}></img></a>
-                                    </div>
-                                    <div className="infos">
-                                        <div className="top-card">
-                                            <div className="avaliacao">
-                                                <i className='bx bx-star'></i>
-                                                <i className='bx bx-star'></i>
-                                                <i className='bx bx-star'></i>
-                                                <i className='bx bx-star'></i>
-                                                <i className='bx bx-star'></i>
-                                            </div>
-                                            <div className="favorito">
-                                                <i className='bx bx-heart'></i>
-                                            </div>
-                                        </div>
-                                        
-                                        <div className="info-produto">
-                                            <h3>Nome produto</h3>
-                                            <span>R$ 189,90</span>
-                                        </div>
-                                        <div className="btn-carrinho">
-                                            <a href="#">
-                                                <i className='bx bx-cart-add'></i> Adicionar no carrinho
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                        
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        )
+  const getProdutos = async () => {
+    try {
+      const response = await siteFetch.get('/produto');
+      const data = response.data;
+      console.log(data)
+      setProdutos(data);
+    } catch (error) {
+      console.log(error);
     }
-}
+  };
+
+  useEffect(() => {
+    getProdutos();
+  }, []);
+
+  const filteredProdutos = categoria ? produtos.filter((produto) => produto.categoria === categoria) : produtos;
+
+  return (
+    <div>
+      <h1 className="title">{categoria ? categoria : 'Todos os produtos'}</h1>
+      <div className="categorias">
+        <div className="container">
+          <div className="multi-categorias">
+            <div className="cont">
+              <ul className="grid-produtos">
+                {filteredProdutos.length === 0 ? (
+                  <p>Carregando...</p>
+                ) : (
+                  filteredProdutos.map((produto) => (
+                    <li className="item-produto" key={produto._id}>
+                      <div className="cont">
+                        <div className="img">
+                        <Link to={`/produto/${produto._id}`}>
+                            <img src={produto.url_imagem} alt="Imagem do produto" />
+                        </Link>
+                        </div>
+                        <div className="infos">
+                          <div className="top-card">
+                            <div className="avaliacao">
+                              <i className="bx bx-star"></i>
+                              <i className="bx bx-star"></i>
+                              <i className="bx bx-star"></i>
+                              <i className="bx bx-star"></i>
+                              <i className="bx bx-star"></i>
+                            </div>
+                            <div className="favorito">
+                              <i className="bx bx-heart"></i>
+                            </div>
+                          </div>
+
+                          <div className="info-produto">
+                            <h3>{produto.nome}</h3>
+                            <span>R$ {produto.preco.toFixed(2)}</span>
+                          </div>
+                          <div className="btn-carrinho">
+                            <a href="#">
+                              <i className="bx bx-cart-add"></i> Adicionar no carrinho
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  ))
+                )}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 export default Cards;

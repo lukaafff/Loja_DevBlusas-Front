@@ -1,0 +1,9 @@
+.ef-texto, .ef-titulo{
+    margin-left: 25px;
+    text-align: justify;
+    
+}
+
+.ef-texto-paragrafo, .ef-texto-titulo{
+    margin: 50px, 5px;
+}

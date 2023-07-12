@@ -1,0 +1,40 @@
+.contS {
+    display: grid;
+    grid-template-columns: auto 1fr; 
+    margin: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-quem-somos {
+    width: 650px;
+}
+
+.devtit {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.txt-quem-somos {
+   text-align: left;
+   padding-right: 100px;
+   padding-left: 100px;
+   text-align: justify;
+   font-size: 1.2rem;
+}
+
+@media screen and (max-width: 1260px){
+    .img-quem-somos {
+        width: 400px;
+    }
+
+    .contS {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .txt-quem-somos{
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+}

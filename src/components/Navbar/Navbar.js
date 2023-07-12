@@ -1,5 +1,6 @@
 import { Component } from "react";
 import { MenuData } from "./MenuData";
+import { Link } from "react-router-dom";
 import "./Navbar.css";
 
 class Navbar extends Component {
@@ -13,13 +14,13 @@ class Navbar extends Component {
     render(){
         return(
             <nav className="NavbarItens">
-                <a href="#"><img src={require('../../images/logo.png')}></img></a>
+                <Link to={`/`}><img src={require('../../images/logo.png')}></img></Link>
                 <ul className={this.state.clicked ? "nav-menu active" : "nav-menu"}>
                     {/* mapear a lista para renderizar através das cheves criadas */}
                     {MenuData.map((item, index) => {
                         return(
                            <li key={index}>
-                                <a href={item.url} className={item.cName}>{item.title}</a>
+                                <Link to={item.url} className={item.cName}>{item.title}</Link>
                             </li> 
                         )
                     })}

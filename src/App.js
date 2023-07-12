@@ -1,13 +1,20 @@
-import "./App.css";
+import { Outlet } from "react-router-dom"
 import Navbar from "./components/Navbar/Navbar";
+
 import Footer from "./components/Footer/Footer";
-import Cards from "./components/Cards/Cards";
+
+
+
+import "./App.css";
 
 function App() {
+  
   return (
     <div className="App">
       <Navbar/>
-      <Cards/>
+      <div className="container-app">
+        <Outlet/>
+      </div>
       <Footer/>
     </div>
   );

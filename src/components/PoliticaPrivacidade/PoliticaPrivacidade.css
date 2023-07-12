@@ -1,0 +1,8 @@
+.pp-texto, .pp-titulo{
+    margin-left: 25px;
+    text-align: justify;
+}
+
+.pp-texto-paragrafo, .pp-texto-titulo{
+    margin: 50px, 5px;
+}
