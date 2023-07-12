@@ -21,6 +21,7 @@ import PoliticaPrivacidade from "./components/PoliticaPrivacidade/PoliticaPrivac
 import TermosUso from "./components/TermosUso/TermosUso";
 import TrocasDevolucoes from "./components/TrocasDevolucoes/TrocasDevolucoes";
 import ProdutoIndivudial from "./routes/ProdutoIndividual";
+import QuemSomos from "./components/QuemSomos/QuemSomos";
 
 const router = createBrowserRouter([
   {
@@ -78,6 +79,10 @@ const router = createBrowserRouter([
       {
         path: "produto/:_id",
         element: <ProdutoIndivudial />,
+      },
+      {
+        path: "quem-somos",
+        element: <QuemSomos />,
       },
     ],
   },

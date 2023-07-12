@@ -1,0 +1,23 @@
+.cont {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    margin: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-quem-somos {
+    width: 750px;
+}
+
+.devtit {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.txt-quem-somos {
+   text-align: left;
+   padding-right: 100px;
+   text-align: justify;
+   font-size: 1.2rem;
+}

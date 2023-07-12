@@ -7,6 +7,12 @@ export const CentralData = [
         cName2: "ct-links"
     },
     {
+        title: "QUEM SOMOS",
+        url: "/quem-somos",
+        cName: "ct-li",
+        cName2: "ct-links"
+    },
+    {
         title: "POLITICA DE PRIVACIDADE",
         url: "/politica-de-privacidade",
         cName: "ct-li",
@@ -35,5 +41,5 @@ export const CentralData = [
         url: "/entregas-e-frete",
         cName: "ct-li",
         cName2: "ct-links"
-    }
+    },
 ]

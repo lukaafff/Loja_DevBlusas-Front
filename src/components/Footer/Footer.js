@@ -20,7 +20,7 @@ class Footer extends Component {
                     <div className="col">
                         <h3>Sobre</h3>
                         <ul className="footer-menu">
-                            <li><Link to="/centraldeatendimento" className="footer-links">Quem somos</Link></li>
+                            <li><Link to="/quem-somos" className="footer-links">Quem somos</Link></li>
                             <li><Link href="#" className="footer-links">Perguntas frequentes</Link></li>
                         </ul>
                     </div>
