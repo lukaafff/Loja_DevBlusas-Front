@@ -8,6 +8,8 @@
     line-height: 1.7;
     text-align: justify;
     width: 80%;
+    padding-left: 20px;
+    padding-right: 20px;
   }
   
   .img-produto img {
@@ -38,7 +40,7 @@
     cursor: pointer;
   }
 
-  .bx-heart{
+  .fvt .bx-heart{
     margin-left: 10px;
     position: relative;
     top: 10px;
@@ -65,4 +67,18 @@
 
   .ngt {
     font-weight: 900;
+  }
+
+  @media screen and (max-width: 796px){
+    .img-produto img {
+      width: 300px;
+    }
+    .containerP {
+      display: flex;
+      flex-direction: column;
+    }
+    .wrapper {
+      padding-left: 0px;
+      padding-right: 0px;
+    }
   }

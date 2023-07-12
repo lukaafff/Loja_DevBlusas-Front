@@ -3,7 +3,7 @@ import "./QuemSomos.css";
 const QuemSomos = () => {
     return (
         <div>
-            <div className="cont">
+            <div className="contS">
                 <img className='img-quem-somos' src={require('../../images/banner-qm-somos.jpg')}></img>
                 <div className='txt-quem-somos'>
                 <h1 className="devtit">DevBlusas</h1>

@@ -55,7 +55,9 @@ const ProdutoIndivudial = () => {
                   <div className='produto-btns'>
                     <div className='add-carrinho'>
                       <button className='btn-comprar'>Comprar</button>
+                      <div className='fvt'>
                       <i className="bx bx-heart"></i>
+                      </div>
                     </div>
                     <div className='precos'>
                       <div className='precos-box'>
