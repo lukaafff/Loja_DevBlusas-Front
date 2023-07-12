@@ -59,7 +59,7 @@ const Cards = ({ categoria }) => {
 
                           <div className="info-produto">
                             <h3>{produto.nome}</h3>
-                            <span>R$ {produto.preco}</span>
+                            <span>R$ {produto.preco.toFixed(2)}</span>
                           </div>
                           <div className="btn-carrinho">
                             <a href="#">
