@@ -2,7 +2,7 @@ import axios from "axios";
 
 const port = 4000
 const siteFetch = axios.create({
-    baseURL: "http://localhost:4000",
+    baseURL: "https://api-loja-dev-blusas.vercel.app",
     headers: {
         "Content-Type": "aplication/json"
     }
