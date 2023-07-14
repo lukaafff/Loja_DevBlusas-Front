@@ -11,7 +11,7 @@ const Cards = ({ categoria }) => {
     try {
       const response = await siteFetch.get('/produto');
       const data = response.data;
-      console.log(data)
+      //console.log(data)
       setProdutos(data);
     } catch (error) {
       console.log(error);
@@ -59,7 +59,7 @@ const Cards = ({ categoria }) => {
 
                           <div className="info-produto">
                             <h3>{produto.nome}</h3>
-                            <span>R$ {produto.preco.toFixed(2)}</span>
+                            <span>R$ {produto.preco}</span>
                           </div>
                           <div className="btn-carrinho">
                             <a href="#">

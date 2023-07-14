@@ -1,7 +1,9 @@
-import { Component } from "react";
+import React, { Component, useState } from "react";
 import { MenuData } from "./MenuData";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
+
+import siteFetch from '../../axios/config';
 
 class Navbar extends Component {
         //trocar icone para quando for para mobile
@@ -9,6 +11,21 @@ class Navbar extends Component {
         handleClick = () => {
             this.setState({clicked:
             !this.state.clicked})
+        }
+
+        handleSearch = (event) => {
+            const searchTerm = event.target.value; // Obtém o valor digitado no input de busca
+    
+            siteFetch.get(`/produto/busca?descricao=${searchTerm}`)
+                .then((response) => {
+                    // tratar a resposta da API e atualizar o estado do componente conforme necessário
+                    console.log("Resultados encontrados", response.data); //exibe os dados da busca no console
+
+                })
+                .catch((error) => {
+                    // Tratar qualquer erro ocorrido na requisição
+                    console.error(error);
+                });
         }
 
     render(){
@@ -26,7 +43,7 @@ class Navbar extends Component {
                     })}
 
                         <div className="busca-input">
-                            <input type="search" className="input"></input>
+                            <input type="search" className="input" onChange={this.handleSearch}></input>
                             <label>Busca</label>
                         </div>
 
