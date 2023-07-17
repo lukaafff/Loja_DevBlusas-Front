@@ -34,6 +34,7 @@ div .title {
 .img img {
     margin: 10px;
     width: 270px;
+    height: 500px;
     border-radius: 30px;
     object-fit: cover;
 }

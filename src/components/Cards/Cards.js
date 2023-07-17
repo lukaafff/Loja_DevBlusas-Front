@@ -23,7 +23,6 @@ const Cards = ({ categoria }) => {
   }, []);
 
   const filteredProdutos = categoria ? produtos.filter((produto) => produto.categoria === categoria) : produtos;
-
   return (
     <div>
       <h1 className="title">{categoria ? categoria : 'Todos os produtos'}</h1>
@@ -59,7 +58,7 @@ const Cards = ({ categoria }) => {
 
                           <div className="info-produto">
                             <h3>{produto.nome}</h3>
-                            <span>R$ {produto.preco}</span>
+                            <span>R$ {Number(produto.preco).toFixed(2)}</span>
                           </div>
                           <div className="btn-carrinho">
                             <a href="#">

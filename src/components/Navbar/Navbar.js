@@ -1,4 +1,4 @@
-import React, { Component, useState } from "react";
+import { Component } from "react";
 import { MenuData } from "./MenuData";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
@@ -13,17 +13,15 @@ class Navbar extends Component {
             !this.state.clicked})
         }
 
+        //busca
         handleSearch = (event) => {
-            const searchTerm = event.target.value; // Obtém o valor digitado no input de busca
+            const searchTerm = event.target.value;
     
             siteFetch.get(`/produto/busca?descricao=${searchTerm}`)
                 .then((response) => {
-                    // tratar a resposta da API e atualizar o estado do componente conforme necessário
-                    console.log("Resultados encontrados", response.data); //exibe os dados da busca no console
-
+                    console.log("Resultados: ",response.data);
                 })
                 .catch((error) => {
-                    // Tratar qualquer erro ocorrido na requisição
                     console.error(error);
                 });
         }
