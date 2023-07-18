@@ -6,41 +6,83 @@ import './Cards.css';
 
 const Cards = ({ categoria }) => {
   const [produtos, setProdutos] = useState([]);
-
-  const getProdutos = async () => {
-    try {
-      const response = await siteFetch.get('/produto');
-      const data = response.data;
-      //console.log(data)
-      setProdutos(data);
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  const [busca, setBusca] = useState('');
+  const [resultados, setResultados] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
+    const getProdutos = async () => {
+      try {
+        const response = await siteFetch.get('/produto');
+        const data = response.data;
+        setProdutos(data);
+        setResultados(data);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
     getProdutos();
   }, []);
 
-  const filteredProdutos = categoria ? produtos.filter((produto) => produto.categoria === categoria) : produtos;
+  const buscarProdutos = async () => {
+    if (busca) {
+      setIsLoading(true);
+      try {
+        const response = await siteFetch.get(`/produto/busca?descricao=${busca}`);
+        const data = response.data;
+        setResultados(data);
+      } catch (error) {
+        console.error(error);
+      }
+      setIsLoading(false);
+    } else {
+      setResultados(produtos);
+    }
+  };
+
+  const handleSearch = (event) => {
+    const searchTerm = event.target.value;
+    setBusca(searchTerm);
+  };
+
+  const handleClickBuscar = () => {
+    buscarProdutos();
+  };
+
+  const filteredProdutos = categoria
+    ? resultados.filter((produto) => produto.categoria === categoria)
+    : resultados;
+
   return (
     <div>
       <h1 className="title">{categoria ? categoria : 'Todos os produtos'}</h1>
       <div className="categorias">
+        <div className="busca-input">
+          <input
+            type="search"
+            className="input"
+            value={busca}
+            onChange={handleSearch}
+          />
+          <label>Busca</label>
+        </div>
+        <button onClick={handleClickBuscar}>Buscar</button>
+        {isLoading && <p>Carregando...</p>}
         <div className="container">
           <div className="multi-categorias">
             <div className="cont">
               <ul className="grid-produtos">
                 {filteredProdutos.length === 0 ? (
-                  <p>Carregando...</p>
+                  <p>Nenhum produto encontrado.</p>
                 ) : (
                   filteredProdutos.map((produto) => (
                     <li className="item-produto" key={produto._id}>
                       <div className="cont">
                         <div className="img">
-                        <Link to={`/produto/${produto._id}`}>
+                          <Link to={`/produto/${produto._id}`}>
                             <img src={produto.url_imagem} alt="Imagem do produto" />
-                        </Link>
+                          </Link>
                         </div>
                         <div className="infos">
                           <div className="top-card">
