@@ -1,6 +1,10 @@
 .categorias {
     background: #d9d9d9;
     padding: 30px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .title h1 {
@@ -34,6 +38,7 @@ div .title {
 .img img {
     margin: 10px;
     width: 270px;
+    height: 500px;
     border-radius: 30px;
     object-fit: cover;
 }
@@ -107,4 +112,42 @@ div .title {
     color: #101010;
     position: relative;
     top: -5px;
+}
+
+/* INPUT DE BUSCA */
+.busca-input {
+    width: 200px;
+    margin: 30px 15px;
+    position: relative;
+}
+
+.busca-input label {
+    font-size: 1rem;
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+    color: #9F9F9F;
+    cursor: text;
+    transition: 0.5s ease-in-out;
+}
+
+.busca-input .input {
+    width: 100%;
+    padding: 5px;
+    color: #9F9F9F;
+    border: 0;
+    border-bottom: 2px solid #9F9F9F;
+    outline: 0;
+    background: none;
+}
+
+.busca-input .input:focus{
+    border-bottom: 2px solid #00cae1;
+    color: #000;
+}
+
+.busca-input .input:focus ~ label{
+    transform: translateY(-24px);
+    font-size: 12px;
+    color: #00cae1;
 }

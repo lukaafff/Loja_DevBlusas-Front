@@ -35,7 +35,7 @@ const ProdutoIndivudial = () => {
   return (
     <div>
       {produto ? (
-        <div class='product-view'>
+        <div className='product-view'>
           <div className='containerP'>
             <div className='img-produto'>
               <img src={produto.url_imagem} alt="Imagem do produto" />
@@ -43,7 +43,7 @@ const ProdutoIndivudial = () => {
             <div className='produto-infos'>
               <div className='wrapper centered-items'>
                 <div className='produto-nome'>
-                  <h1 class='tituloP'>{produto.nome}</h1>
+                  <h1 className='tituloP'>{produto.nome}</h1>
                 </div>
                 <div className='detalhes'>
                   <span className='descricaoP'>Descrição:</span>
