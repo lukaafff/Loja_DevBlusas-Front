@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import siteFetch from '../../axios/config';
 import { Link } from 'react-router-dom';
 
+import { useFavoritosContext } from "../favoritos/contexts/FavoritosContext";
+
 import './Cards.css';
 
 const Cards = ({ categoria }) => {
@@ -50,6 +52,20 @@ const Cards = ({ categoria }) => {
     buscarProdutos();
   };
 
+  const { favoritos, adicionarFavorito, removerFavorito } = useFavoritosContext();
+
+  const isFavorito = (produtoId) => {
+    return favoritos.some((produto) => produto._id === produtoId);
+  };
+
+  const handleFavoritoClick = (produto) => {
+    if (isFavorito(produto._id)) {
+      removerFavorito(produto._id);
+    } else {
+      adicionarFavorito(produto);
+    }
+  };
+
   const filteredProdutos = categoria
     ? resultados.filter((produto) => produto.categoria === categoria)
     : resultados;
@@ -87,14 +103,14 @@ const Cards = ({ categoria }) => {
                         <div className="infos">
                           <div className="top-card">
                             <div className="avaliacao">
-                              <i className="bx bx-star"></i>
-                              <i className="bx bx-star"></i>
-                              <i className="bx bx-star"></i>
-                              <i className="bx bx-star"></i>
-                              <i className="bx bx-star"></i>
+                              <i className="bx bxs-star"></i>
+                              <i className="bx bxs-star"></i>
+                              <i className="bx bxs-star"></i>
+                              <i className="bx bxs-star"></i>
+                              <i className="bx bxs-star"></i>
                             </div>
-                            <div className="favorito">
-                              <i className="bx bx-heart"></i>
+                            <div className="favorito" onClick={() => handleFavoritoClick(produto)}>
+                               <i className={isFavorito(produto._id) ? "bx bxs-heart" : "bx bx-heart"}></i>
                             </div>
                           </div>
 

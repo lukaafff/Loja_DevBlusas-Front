@@ -31,6 +31,10 @@ const Navbar = () => {
             <i className="bx bxs-user"></i>
             <label>Login</label>
           </div>
+          <Link to={'/favoritos'} className="footer-links"><div className="Nfavorito">
+            <i className="bx bx-heart"></i>
+            <label className="favoritotxt" >Favoritos</label>
+          </div></Link>
         </div>
       </ul>
       <div className="menu" onClick={handleClick}>

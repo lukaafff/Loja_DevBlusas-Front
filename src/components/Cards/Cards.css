@@ -67,11 +67,12 @@ div .title {
     height: 10px;
 }
 
-.avaliacao .bx-star {
+.avaliacao .bxs-star {
     color: #FFC700;
 }
 
-.favorito .bx-heart {
+.favorito .bx-heart,
+.favorito .bxs-heart {
     color: #FD0B28;
 }
 
