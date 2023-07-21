@@ -82,8 +82,8 @@ const Cards = ({ categoria }) => {
             onChange={handleSearch}
           />
           <label>Busca</label>
+        <button className='btn-buscar' onClick={handleClickBuscar}>Buscar</button>
         </div>
-        <button onClick={handleClickBuscar}>Buscar</button>
         {isLoading && <p>Carregando...</p>}
         <div className="container">
           <div className="multi-categorias">
