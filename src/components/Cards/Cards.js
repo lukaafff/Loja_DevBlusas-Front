@@ -6,16 +6,21 @@ import { useFavoritosContext } from "../favoritos/contexts/FavoritosContext";
 
 import './Cards.css';
 
-const Cards = ({ categoria }) => {
+const Cards = ({ categoria , pagina }) => {
   const [produtos, setProdutos] = useState([]);
   const [busca, setBusca] = useState('');
   const [resultados, setResultados] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+  const [paginaAtual, setPaginaAtual] = useState(pagina || 1);
 
   useEffect(() => {
     const getProdutos = async () => {
       try {
-        const response = await siteFetch.get('/produto');
+        let url = `/produto`;
+        if (paginaAtual) {
+          url += `?pagina=${paginaAtual}`;
+        }
+        const response = await siteFetch.get(url);
         const data = response.data;
         setProdutos(data);
         setResultados(data);
@@ -25,7 +30,11 @@ const Cards = ({ categoria }) => {
     };
 
     getProdutos();
-  }, []);
+  }, [categoria, paginaAtual]);
+  
+  const filteredProdutos = categoria
+  ? resultados.filter((produto) => produto.categoria === categoria)
+  : resultados;
 
   const buscarProdutos = async () => {
     if (busca) {
@@ -66,9 +75,37 @@ const Cards = ({ categoria }) => {
     }
   };
 
-  const filteredProdutos = categoria
-    ? resultados.filter((produto) => produto.categoria === categoria)
-    : resultados;
+  const itensPorPagina = 9; // Defina quantos itens serão exibidos por página
+  const paginasTotais = Math.ceil(filteredProdutos.length / itensPorPagina);
+  const paginas = Array.from({ length: paginasTotais }, (_, index) => index + 1);
+
+  const handlePaginaAnterior = () => {
+    if (paginaAtual > 1) {
+      // Vá para a página anterior se não estiver na primeira página
+      setPaginaAtual(paginaAtual - 1);
+    }
+  };
+
+  const handlePaginaProxima = () => {
+    if (paginaAtual < paginasTotais) {
+      // Vá para a próxima página se não estiver na última página
+      setPaginaAtual(paginaAtual + 1);
+    }
+  };
+
+  const handlePaginaEspecifica = (numPagina) => {
+    setPaginaAtual(numPagina);
+  };
+
+  const renderBotoesPagina = paginas.map((numPagina) => (
+    <button
+      key={numPagina}
+      onClick={() => handlePaginaEspecifica(numPagina)}
+      className={paginaAtual === numPagina ? 'btn-pagina ativo' : 'btn-pagina'}
+    >
+      {numPagina}
+    </button>
+  ));
 
   return (
     <div>
@@ -131,6 +168,15 @@ const Cards = ({ categoria }) => {
               </ul>
             </div>
           </div>
+        </div>
+        <div className="botoes-pagina">
+          <button onClick={handlePaginaAnterior} className="btn-pagina">
+            Anterior
+          </button>
+          {renderBotoesPagina}
+          <button onClick={handlePaginaProxima} className="btn-pagina">
+            Próxima
+          </button>
         </div>
       </div>
     </div>
