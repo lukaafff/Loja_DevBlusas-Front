@@ -71,7 +71,7 @@ html {
 
 .bx-cart {
     position: relative;
-    bottom: 5px;
+    top: 3px;
 }
 
 .login:hover{

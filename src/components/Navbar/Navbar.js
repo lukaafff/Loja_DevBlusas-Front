@@ -26,11 +26,11 @@ const Navbar = () => {
         ))}
 
         <div className="nav-rigth">
-          <i className="bx bx-cart"></i>
-          <div className="login">
+          <Link to="/carrinho-de-compras" className="footer-links"><i className="bx bx-cart"></i></Link>
+          <Link to="/login" className="footer-links"><div className="login">
             <i className="bx bxs-user"></i>
             <label>Login</label>
-          </div>
+          </div></Link>
           <Link to={'/favoritos'} className="footer-links"><div className="Nfavorito">
             <i className="bx bx-heart"></i>
             <label className="favoritotxt" >Favoritos</label>
