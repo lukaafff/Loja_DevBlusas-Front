@@ -21,16 +21,16 @@ class Footer extends Component {
                         <h3>Sobre</h3>
                         <ul className="footer-menu">
                             <li><Link to="/quem-somos" className="footer-links">Quem somos</Link></li>
-                            <li><Link href="#" className="footer-links">Perguntas frequentes</Link></li>
+                            <li><Link to="/perguntas-frequentes" className="footer-links">Perguntas frequentes</Link></li>
                         </ul>
                     </div>
 
                     <div className="col">
                         <h3>Meus dados</h3>
                         <ul className="footer-menu">
-                            <li><Link to="/centraldeatendimento" className="footer-links">Minha conta</Link></li>
-                            <li><Link to="/centraldeatendimento" className="footer-links">Meus pedidos</Link></li>
-                            <li><Link to="/centraldeatendimento" className="footer-links">Minha lista de desejos</Link></li>
+                            <li><Link to="/login" className="footer-links">Minha conta</Link></li>
+                            <li><Link to="/login" className="footer-links">Meus pedidos</Link></li>
+                            <li><Link to="/favoritos" className="footer-links">Minha lista de desejos</Link></li>
                         </ul>
                     </div>
 

@@ -15,7 +15,7 @@ const Vestidos = () => {
   return (
     <div>
       <Carousel data={images} />
-      <Cards categoria="vestidos" /> {/* Renderizar os cards com o sub ID "vestidos" */}
+      <Cards categoria="vestidos" pagina={2} /> {/* Renderizar os cards com o sub ID "vestidos" e página 2 */}
     </div>
   );
 };

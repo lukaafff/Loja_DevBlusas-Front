@@ -67,11 +67,12 @@ div .title {
     height: 10px;
 }
 
-.avaliacao .bx-star {
+.avaliacao .bxs-star {
     color: #FFC700;
 }
 
-.favorito .bx-heart {
+.favorito .bx-heart,
+.favorito .bxs-heart {
     color: #FD0B28;
 }
 
@@ -116,6 +117,9 @@ div .title {
 
 /* INPUT DE BUSCA */
 .busca-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 200px;
     margin: 30px 15px;
     position: relative;
@@ -151,3 +155,38 @@ div .title {
     font-size: 12px;
     color: #00cae1;
 }
+
+.btn-buscar{
+    background-color: #00CAE1;
+    outline: none;
+    border: none;
+    padding: 10px 15px;
+    color: #000;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 1.1rem;
+    border-radius: 30px;
+}
+
+.botoes-pagina {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .btn-pagina {
+    cursor: pointer;
+    background-color: #00CAE1;
+    color: #000;
+    border: none;
+    font-weight: 800;
+    padding: 10px 15px;
+    margin: 0 5px;
+    border-radius: 5px;
+  }
+  
+  .btn-pagina.ativo {
+    background-color: #04bace;
+  }
+  

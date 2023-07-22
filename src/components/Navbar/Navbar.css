@@ -43,6 +43,7 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-left: 30px;
 }
 
 .bx {
@@ -70,7 +71,7 @@ html {
 
 .bx-cart {
     position: relative;
-    bottom: 5px;
+    top: 3px;
 }
 
 .login:hover{
@@ -79,6 +80,22 @@ html {
 
 .bx-cart:hover{
     color: #00cae1;
+}
+
+.Nfavorito {
+    position: relative;
+    top: 5px;
+    padding-left: 20px;
+}
+
+.favoritotxt {
+    color:  #fff;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+    bottom: 8px;
+    cursor: pointer;
 }
 
 #menu-icon{

@@ -22,6 +22,10 @@ import TermosUso from "./components/TermosUso/TermosUso";
 import TrocasDevolucoes from "./components/TrocasDevolucoes/TrocasDevolucoes";
 import ProdutoIndivudial from "./routes/ProdutoIndividual";
 import QuemSomos from "./components/QuemSomos/QuemSomos";
+import Favoritos from "./components/favoritos/contexts/Favoritos";
+import PerguntasFrequentes from "./components/PerguntasFrequentes/PerguntasFrequentes";
+import Login from "./components/Login/Login";
+import CarrinhoDeCompras from "./components/CarrinhoDeCompras/CarrinhoDeCompras";
 
 const router = createBrowserRouter([
   {
@@ -83,6 +87,22 @@ const router = createBrowserRouter([
       {
         path: "quem-somos",
         element: <QuemSomos />,
+      },
+      {
+        path: "favoritos",
+        element: <Favoritos />,
+      },
+      {
+        path: "perguntas-frequentes",
+        element: <PerguntasFrequentes />,
+      },
+      {
+        path: "login",
+        element: <Login />,
+      },
+      {
+        path: "carrinho-de-compras",
+        element: <CarrinhoDeCompras />,
       },
     ],
   },
