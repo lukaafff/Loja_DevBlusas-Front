@@ -14,7 +14,7 @@ const Login = () => {
 
   return (
     <div className="containerL">
-      <div className="cont">
+      <div className="contL">
         <div className="botoesForm">
           <div className="btnCor" style={{ left: isLoginForm ? "0px" : "110px" }}></div>
           <button id="btnLogin" onClick={handleLoginClick}>Entrar</button>
