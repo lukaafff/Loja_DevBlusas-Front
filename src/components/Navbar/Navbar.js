@@ -11,6 +11,10 @@ const Navbar = () => {
     setClicked(!clicked);
   };
 
+  const handleItemClick = () => {
+    setClicked(false); 
+  };
+
   return (
     <nav className="NavbarItens">
       <Link to={`/`}>
@@ -19,22 +23,29 @@ const Navbar = () => {
       <ul className={clicked ? "nav-menu active" : "nav-menu"}>
         {MenuData.map((item, index) => (
           <li key={index}>
-            <Link to={item.url} className={item.cName}>
+            {/* Use onClick para chamar a função handleItemClick */}
+            <Link to={item.url} className={item.cName} onClick={handleItemClick}>
               {item.title}
             </Link>
           </li>
         ))}
 
         <div className="nav-rigth">
-          <Link to="/carrinho-de-compras" className="footer-links"><i className="bx bx-cart"></i></Link>
-          <Link to="/login" className="footer-links"><div className="login">
-            <i className="bx bxs-user"></i>
-            <label>Login</label>
-          </div></Link>
-          <Link to={'/favoritos'} className="footer-links"><div className="Nfavorito">
-            <i className="bx bx-heart"></i>
-            <label className="favoritotxt" >Favoritos</label>
-          </div></Link>
+          <Link to="/carrinho-de-compras" className="footer-links">
+            <i className="bx bx-cart"></i>
+          </Link>
+          <Link to="/login" className="footer-links">
+            <div className="login">
+              <i className="bx bxs-user"></i>
+              <label>Login</label>
+            </div>
+          </Link>
+          <Link to={'/favoritos'} className="footer-links">
+            <div className="Nfavorito">
+              <i className="bx bx-heart"></i>
+              <label className="favoritotxt" >Favoritos</label>
+            </div>
+          </Link>
         </div>
       </ul>
       <div className="menu" onClick={handleClick}>
