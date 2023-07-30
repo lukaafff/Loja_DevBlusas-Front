@@ -1,5 +1,6 @@
 import React from "react";
 import { useFavoritosContext } from "./FavoritosContext";
+import "./Favoritos.css"
 
 const Favoritos = () => {
   const { favoritos } = useFavoritosContext();
