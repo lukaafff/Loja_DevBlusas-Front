@@ -78,6 +78,10 @@ const router = createBrowserRouter([
             path: "entregas-e-frete",
             element: <EntregasFretes />,
           },
+          {
+            path: "perguntas-frequentes",
+            element: <PerguntasFrequentes />,
+          },
         ],
       },
       {
@@ -91,10 +95,6 @@ const router = createBrowserRouter([
       {
         path: "favoritos",
         element: <Favoritos />,
-      },
-      {
-        path: "perguntas-frequentes",
-        element: <PerguntasFrequentes />,
       },
       {
         path: "login",

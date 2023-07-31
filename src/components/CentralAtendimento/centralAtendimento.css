@@ -28,7 +28,7 @@
     padding-top: 10px;
     padding-left: 10px;
     padding-bottom: 5px;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-top: 1px solid rgba(255, 253, 253, 0.1);
     transition: background 0.5s;
 }
 
@@ -39,7 +39,7 @@
 
 .ct-links{
     text-decoration: none;
-    color: black;
+    color: #d9d9d9;
 }
 
 .ct-componente{

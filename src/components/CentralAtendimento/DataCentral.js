@@ -42,4 +42,10 @@ export const CentralData = [
         cName: "ct-li",
         cName2: "ct-links"
     },
+    {
+        title: "PERGUNTAS FREQUENTES",
+        url: "/perguntas-frequentes",
+        cName: "ct-li",
+        cName2: "ct-links"
+    }
 ]
